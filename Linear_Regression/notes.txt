@@ -1,0 +1,29 @@
+Main Things one needs to know while implementing an ML algorithm
+
+1) Model y = f(X) what form will f(X) take ?
+2) What is the Cost function or loss for the model.
+3) What variables in f(X) is our algorithm learning?
+4) What learning algorithm is being used ? Typically, Gradient Descent.
+5) Since we are using Gradient Descent - it becomes very important to understand the derivative of the loss function with respect to the variables one is trying to learn.For eg: in linear regression one learns the slope and intercept.
+6) Slope will be referred to as weights and intercept as bias.
+
+
+Programming notes for writing ML algorithms's from scratch
+
+We will write a class for the model f(X). 
+
+The class will have 6 functions :-
+
+1) Initialization - initialize with learning rate and number of iterations one would like the model to take to learn.
+2) Forward pass or predict - function to calculate y_pred.
+3) Loss function
+4) Gradients - function codes for gradients wrt weights and bias
+5) Update - function to update the weights / bias.
+6) Fit - function that fits the model to incoming data.
+
+
+Functions prefixed by __name are internal to the class. By convention should not be accessed from outside the class. Therefore one writes functions for loss, gradients and update with __loss, __gradient etc.
+
+Functions like predict and fit will be accessed from outside the class and will be used to evaluate how well the model works on chosen data.
+
+
